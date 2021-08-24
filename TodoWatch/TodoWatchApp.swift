@@ -11,7 +11,7 @@ import SwiftUI
 struct TodoWatchApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeScreen()
         }
     }
 }
