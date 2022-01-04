@@ -1,2 +1,2 @@
 # TodoWatch
-iOS version of todo app with stopwatch, calender, etc
+iOS version of todo app with stopwatch, calendar, etc
