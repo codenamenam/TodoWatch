@@ -13,14 +13,12 @@ struct HomeScreen: View {
     
     var body: some View {
         VStack {
-            
             VStack {
                 TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
                     
                     ScrollView{
                         VStack{
                             CalendarView()
-                            
                             AnalysisView()
                         }
                     }
@@ -34,45 +32,34 @@ struct HomeScreen: View {
                     }
                     .tag(2)
                     
-                    
                     Text("Tab Content 3")
-                        .tag(3)
-                        
-                    
+                    .tag(3)
                 }
-                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-
+                .tabViewStyle(.page(indexDisplayMode: .never))
                 
-                HStack (spacing: 0) {
-                    Spacer()
-                    
-                    
+                //.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+
+                HStack (spacing:0) {
                     RoundedRectangle(cornerRadius: 4)
-                        .frame(width: 125, height: 50, alignment: .center)
+                        .frame(height: 50, alignment: .center)
                         .foregroundColor(.yellow)
                         .overlay(Text("그래프"))
-                        .onTapGesture {
-                            isSelected.toggle()
+                        .onTapGesture(count: 1) {
+                            
                         }
 
                     RoundedRectangle(cornerRadius: 4)
-                        .frame(width: 125, height: 50, alignment: .center)
+                        .frame(height: 50, alignment: .center)
                         .foregroundColor(.yellow)
                         .overlay(Text("오늘 할 일"))
                     
                     RoundedRectangle(cornerRadius: 4)
-                        .frame(width: 125, height: 50, alignment: .center)
+                        .frame(height: 50, alignment: .center)
                         .foregroundColor(.yellow)
                         .overlay(Text("목표 달성"))
-                                        
-                        
-                    Spacer()
+                    
                 }
-                
             }
-            
-            
-            
         }
     }
 }
