@@ -10,7 +10,8 @@
 		3D06C41F26D4E5510015A1DA /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06C41E26D4E5510015A1DA /* StopWatch.swift */; };
 		3D06C42726D4E7600015A1DA /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06C42626D4E7600015A1DA /* HomeScreen.swift */; };
 		3D06C43026D4F3020015A1DA /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06C42F26D4F3020015A1DA /* TopBar.swift */; };
-		3D5E63D427843EC2002D71B0 /* TabBarControllerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E63D327843EC2002D71B0 /* TabBarControllerMain.swift */; };
+		3D3E0305278C1C0A009635E4 /* TodoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3E0304278C1C0A009635E4 /* TodoButton.swift */; };
+		3D3E0309278C2586009635E4 /* AddTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3E0308278C2586009635E4 /* AddTodo.swift */; };
 		3DADAC1326DCD53A00223C87 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADAC1226DCD53A00223C87 /* CalendarView.swift */; };
 		3DADAC1B26DCD55300223C87 /* AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADAC1A26DCD55300223C87 /* AnalysisView.swift */; };
 		3DE1FB4A26D4B96B002D9EAE /* TodoWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE1FB4926D4B96B002D9EAE /* TodoWatchApp.swift */; };
@@ -41,7 +42,8 @@
 		3D06C41E26D4E5510015A1DA /* StopWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 		3D06C42626D4E7600015A1DA /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		3D06C42F26D4F3020015A1DA /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
-		3D5E63D327843EC2002D71B0 /* TabBarControllerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerMain.swift; sourceTree = "<group>"; };
+		3D3E0304278C1C0A009635E4 /* TodoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoButton.swift; sourceTree = "<group>"; };
+		3D3E0308278C2586009635E4 /* AddTodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodo.swift; sourceTree = "<group>"; };
 		3DADAC1226DCD53A00223C87 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		3DADAC1A26DCD55300223C87 /* AnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisView.swift; sourceTree = "<group>"; };
 		3DE1FB4626D4B96B002D9EAE /* TodoWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,10 +88,19 @@
 			isa = PBXGroup;
 			children = (
 				3D06C42626D4E7600015A1DA /* HomeScreen.swift */,
-				3D06C42F26D4F3020015A1DA /* TopBar.swift */,
-				3D5E63D327843EC2002D71B0 /* TabBarControllerMain.swift */,
+				3D3E0303278C1B6E009635E4 /* HomeScreenElements */,
 			);
 			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		3D3E0303278C1B6E009635E4 /* HomeScreenElements */ = {
+			isa = PBXGroup;
+			children = (
+				3D06C42F26D4F3020015A1DA /* TopBar.swift */,
+				3D3E0308278C2586009635E4 /* AddTodo.swift */,
+				3D3E0304278C1C0A009635E4 /* TodoButton.swift */,
+			);
+			path = HomeScreenElements;
 			sourceTree = "<group>";
 		};
 		3DADABE926DCB0B400223C87 /* StopWatch */ = {
@@ -300,11 +311,12 @@
 			files = (
 				3D06C41F26D4E5510015A1DA /* StopWatch.swift in Sources */,
 				3DADAC1326DCD53A00223C87 /* CalendarView.swift in Sources */,
+				3D3E0305278C1C0A009635E4 /* TodoButton.swift in Sources */,
 				3DE1FB4A26D4B96B002D9EAE /* TodoWatchApp.swift in Sources */,
-				3D5E63D427843EC2002D71B0 /* TabBarControllerMain.swift in Sources */,
 				3DADAC1B26DCD55300223C87 /* AnalysisView.swift in Sources */,
 				3D06C42726D4E7600015A1DA /* HomeScreen.swift in Sources */,
 				3D06C43026D4F3020015A1DA /* TopBar.swift in Sources */,
+				3D3E0309278C2586009635E4 /* AddTodo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

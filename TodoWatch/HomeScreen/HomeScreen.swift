@@ -12,9 +12,10 @@ struct HomeScreen: View {
     @State var isSelected: Bool = false
     
     var body: some View {
+        
         VStack {
             VStack {
-                TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
+                TabView(){
                     
                     ScrollView{
                         VStack{
@@ -23,22 +24,36 @@ struct HomeScreen: View {
                         }
                     }
                     .tag(1)
+                    .tabItem {
+                        Image(systemName: "note.text")
+                        Text("그래프")
+                    }
                     
                     VStack{
                         TopBar()
                         Spacer()
-                        Image(systemName: "message")
+                        ScrollView{
+                            TodoButton()
+                        }
                         Spacer()
                     }
                     .tag(2)
+                    .tabItem{
+                        Image(systemName: "stopwatch")
+                        Text("오늘 할 일")
+                    }
                     
                     Text("Tab Content 3")
                     .tag(3)
+                    .tabItem{
+                        Image(systemName: "flag")
+                        Text("목표 달성")
+                    }
+                    
                 }
-                .tabViewStyle(.page(indexDisplayMode: .never))
+                .tabViewStyle(DefaultTabViewStyle.init())
                 
-                //.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-
+                /*
                 HStack (spacing:0) {
                     RoundedRectangle(cornerRadius: 4)
                         .frame(height: 50, alignment: .center)
@@ -59,6 +74,7 @@ struct HomeScreen: View {
                         .overlay(Text("목표 달성"))
                     
                 }
+                 */
             }
         }
     }
