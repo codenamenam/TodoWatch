@@ -12,8 +12,7 @@
 		3D06C43026D4F3020015A1DA /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D06C42F26D4F3020015A1DA /* TopBar.swift */; };
 		3D3E0305278C1C0A009635E4 /* TodoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3E0304278C1C0A009635E4 /* TodoButton.swift */; };
 		3D3E0309278C2586009635E4 /* AddTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3E0308278C2586009635E4 /* AddTodo.swift */; };
-		3DADAC1326DCD53A00223C87 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADAC1226DCD53A00223C87 /* CalendarView.swift */; };
-		3DADAC1B26DCD55300223C87 /* AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADAC1A26DCD55300223C87 /* AnalysisView.swift */; };
+		3DADAC1326DCD53A00223C87 /* ScrollBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DADAC1226DCD53A00223C87 /* ScrollBlockView.swift */; };
 		3DE1FB4A26D4B96B002D9EAE /* TodoWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE1FB4926D4B96B002D9EAE /* TodoWatchApp.swift */; };
 		3DE1FB4E26D4B96E002D9EAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE1FB4D26D4B96E002D9EAE /* Assets.xcassets */; };
 		3DE1FB5126D4B96E002D9EAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE1FB5026D4B96E002D9EAE /* Preview Assets.xcassets */; };
@@ -44,8 +43,7 @@
 		3D06C42F26D4F3020015A1DA /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		3D3E0304278C1C0A009635E4 /* TodoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoButton.swift; sourceTree = "<group>"; };
 		3D3E0308278C2586009635E4 /* AddTodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodo.swift; sourceTree = "<group>"; };
-		3DADAC1226DCD53A00223C87 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
-		3DADAC1A26DCD55300223C87 /* AnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisView.swift; sourceTree = "<group>"; };
+		3DADAC1226DCD53A00223C87 /* ScrollBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollBlockView.swift; sourceTree = "<group>"; };
 		3DE1FB4626D4B96B002D9EAE /* TodoWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE1FB4926D4B96B002D9EAE /* TodoWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoWatchApp.swift; sourceTree = "<group>"; };
 		3DE1FB4D26D4B96E002D9EAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,8 +112,7 @@
 		3DADABED26DCCEBB00223C87 /* CalendarAndAnalysis */ = {
 			isa = PBXGroup;
 			children = (
-				3DADAC1226DCD53A00223C87 /* CalendarView.swift */,
-				3DADAC1A26DCD55300223C87 /* AnalysisView.swift */,
+				3DADAC1226DCD53A00223C87 /* ScrollBlockView.swift */,
 			);
 			path = CalendarAndAnalysis;
 			sourceTree = "<group>";
@@ -310,10 +307,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D06C41F26D4E5510015A1DA /* StopWatch.swift in Sources */,
-				3DADAC1326DCD53A00223C87 /* CalendarView.swift in Sources */,
+				3DADAC1326DCD53A00223C87 /* ScrollBlockView.swift in Sources */,
 				3D3E0305278C1C0A009635E4 /* TodoButton.swift in Sources */,
 				3DE1FB4A26D4B96B002D9EAE /* TodoWatchApp.swift in Sources */,
-				3DADAC1B26DCD55300223C87 /* AnalysisView.swift in Sources */,
 				3D06C42726D4E7600015A1DA /* HomeScreen.swift in Sources */,
 				3D06C43026D4F3020015A1DA /* TopBar.swift in Sources */,
 				3D3E0309278C2586009635E4 /* AddTodo.swift in Sources */,

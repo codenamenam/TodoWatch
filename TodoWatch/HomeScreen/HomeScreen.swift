@@ -15,13 +15,20 @@ struct HomeScreen: View {
         
         VStack {
             VStack {
+                
+                Text("")
+                
                 TabView(){
                     
                     ScrollView{
+                        
                         VStack{
-                            CalendarView()
-                            AnalysisView()
+                            ScrollBlockView(title: "캘린더")
+                            ScrollBlockView(title: "통계")
+                            Spacer(minLength: CGFloat.init(20))
                         }
+                        
+                        
                     }
                     .tag(1)
                     .tabItem {
@@ -49,32 +56,8 @@ struct HomeScreen: View {
                         Image(systemName: "flag")
                         Text("목표 달성")
                     }
-                    
                 }
                 .tabViewStyle(DefaultTabViewStyle.init())
-                
-                /*
-                HStack (spacing:0) {
-                    RoundedRectangle(cornerRadius: 4)
-                        .frame(height: 50, alignment: .center)
-                        .foregroundColor(.yellow)
-                        .overlay(Text("그래프"))
-                        .onTapGesture(count: 1) {
-                            
-                        }
-
-                    RoundedRectangle(cornerRadius: 4)
-                        .frame(height: 50, alignment: .center)
-                        .foregroundColor(.yellow)
-                        .overlay(Text("오늘 할 일"))
-                    
-                    RoundedRectangle(cornerRadius: 4)
-                        .frame(height: 50, alignment: .center)
-                        .foregroundColor(.yellow)
-                        .overlay(Text("목표 달성"))
-                    
-                }
-                 */
             }
         }
     }
