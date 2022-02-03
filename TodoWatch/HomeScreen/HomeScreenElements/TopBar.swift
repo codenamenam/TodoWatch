@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct TopBar: View {
-    @State private var showModal = false
-    
+    @State private var showAddTodo = false
     
     var body: some View {
         HStack {
@@ -17,29 +16,46 @@ struct TopBar: View {
                 .font(.title)
                 .bold()
                 .padding()
-        Spacer()
+            
+            Spacer()
             
             Group {
-                Button(action: {
-                    self.showModal = true
-                }, label: {
-                    Text("+")
-                        .font(.title)
+                Button(action: {showAddTodo.toggle()}, label: {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(width:70, height: 40, alignment: .center)
+                            .foregroundColor(Color.blue.opacity(0.8))
+                        Text("추가")
+                            .foregroundColor(Color.white)
+                            .bold()
+                    }
                 })
-                    .sheet(isPresented: self.$showModal){
+                    .sheet(isPresented: self.$showAddTodo, onDismiss: dismiss){
                         AddTodo()
                     }
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    Text("-")
-                        .font(.title)
+                Button(action: delete, label: {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(width:70, height: 40, alignment: .center)
+                            .foregroundColor(Color.red.opacity(0.8))
+                        Text("삭제")
+                            .foregroundColor(Color.white)
+                            .bold()
+                    }
                 })
+                
             }
-            .padding()
+            
         }
         .padding()
+    }
+    
+    func dismiss(){
         
-        
+    }
+    
+    func delete(){
         
     }
 }
