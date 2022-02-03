@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeScreen: View {
     
-    @State var isSelected: Bool = false
+    @State private var startScreen = 2
     
     var body: some View {
         
@@ -17,18 +17,13 @@ struct HomeScreen: View {
             VStack {
                 
                 Text("")
-                
-                TabView(){
-                    
+                TabView(selection: $startScreen){
                     ScrollView{
-                        
                         VStack{
                             ScrollBlockView(title: "캘린더")
                             ScrollBlockView(title: "통계")
                             Spacer(minLength: CGFloat.init(20))
                         }
-                        
-                        
                     }
                     .tag(1)
                     .tabItem {
@@ -51,11 +46,11 @@ struct HomeScreen: View {
                     }
                     
                     Text("Tab Content 3")
-                    .tag(3)
-                    .tabItem{
-                        Image(systemName: "flag")
-                        Text("목표 달성")
-                    }
+                        .tag(3)
+                        .tabItem{
+                            Image(systemName: "flag")
+                            Text("목표 달성")
+                        }
                 }
                 .tabViewStyle(DefaultTabViewStyle.init())
             }

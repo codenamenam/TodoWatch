@@ -10,14 +10,7 @@ import SwiftUI
 struct TodoButton: View {
     var body: some View {
         VStack{
-        Text("hey")
-        Text("hey")
-        Text("hey")
-        Text("hey")
-        Text("hey")
-        Text("hey")
-        Text("hey")
-        Text("hey")
+            
         }
     }
 }

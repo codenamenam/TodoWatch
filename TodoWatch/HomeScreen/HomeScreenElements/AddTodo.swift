@@ -10,29 +10,14 @@ import UIKit
 
 struct AddTodo: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State private var addGroup : String = ""
-    @State private var addTodo : String = ""
+    @State var addGroup : String = ""
+    @State var addTodo1: String = ""
+    @State var todoNumber: Int = 0
     
     var body: some View {
         let screenSize: CGRect = UIScreen.main.bounds
         
         VStack {
-            
-            /*
-             HStack{
-             Spacer(minLength: 20)
-             Button(action: {
-             self.presentationMode.wrappedValue.dismiss()
-             }) {
-             Image("Graphics_X_Button")
-             .resizable()
-             .aspectRatio(CGSize(width: 0.1, height: 0.1), contentMode: .fit)
-             .frame(width: 40, height: 40)
-             }
-             .padding(30)
-             }
-             */
-            
             
             Text("할 일 추가")
                 .font(.title.bold())
@@ -65,68 +50,46 @@ struct AddTodo: View {
                     .font(.title2.bold())
                     .padding(.leading, 40)
                 Spacer()
+                
+                Button(action: {todoNumber += 1}) {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(width: 60, height: 30, alignment: .center)
+                            .foregroundColor(.green.opacity(0.8))
+                        
+                        Text("추가")
+                            .foregroundColor(.white)
+                            .bold()
+                    }
+                }
+                
+                Button(action: {
+                    if(todoNumber > 0)
+                    {todoNumber -= 1}}) {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 10)
+                            .frame(width: 60, height: 30, alignment: .center)
+                            .foregroundColor(.red.opacity(0.8))
+                        
+                        Text("삭제")
+                            .foregroundColor(.white)
+                            .bold()
+                    }
+                    .padding(.trailing, 30)
+                }
+                
+                
             }
-            ScrollView{
-                Group{
-                    
+            
+            ScrollView {
+                ForEach(0 ..< todoNumber, id: \.self) { _ in
                     ZStack{
-                        RoundedRectangle(cornerRadius: 20)
+                        RoundedRectangle(cornerRadius: 10)
                             .fill(Color.lightGray)
-                            .frame(width: 330, height: 60, alignment: .center)
+                            .frame(width: screenSize.width-40, height: 60, alignment: .center)
                         
-                        
-                        
-                        TextField("안녕?", text : $addTodo)
-                            .frame(width: 300, height: 60, alignment: .center)
-                        
-                    }
-                    
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(Color.lightGray)
-                            .frame(width: 330, height: 60, alignment: .center)
-                        
-                        
-                        
-                        TextField("안녕?", text : $addTodo)
-                            .frame(width: 300, height: 60, alignment: .center)
-                        
-                    }
-                    
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(Color.lightGray)
-                            .frame(width: 330, height: 60, alignment: .center)
-                        
-                        
-                        
-                        TextField("안녕?", text : $addTodo)
-                            .frame(width: 300, height: 60, alignment: .center)
-                        
-                    }
-                    
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(Color.lightGray)
-                            .frame(width: 330, height: 60, alignment: .center)
-                        
-                        
-                        
-                        TextField("안녕?", text : $addTodo)
-                            .frame(width: 300, height: 60, alignment: .center)
-                        
-                    }
-                    
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(Color.lightGray)
-                            .frame(width: 330, height: 60, alignment: .center)
-                        
-                        
-                        
-                        TextField("안녕?", text : $addTodo)
-                            .frame(width: 300, height: 60, alignment: .center)
-                        
+                        TextField("안녕?", text : $addTodo1)
+                            .frame(width: screenSize.width-60, height: 60, alignment: .center)
                     }
                 }
             }
@@ -134,9 +97,12 @@ struct AddTodo: View {
             Spacer()
             
         }
+        
     }
     
 }
+
+
 
 extension Color {
     static let lightGray = Color(RGBColorSpace.displayP3, red: 0, green: 0, blue: 0, opacity: 0.2)
