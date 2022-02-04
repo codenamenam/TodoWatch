@@ -10,9 +10,13 @@ import UIKit
 
 struct AddTodo: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var addGroup : String = ""
-    @State var addTodo1: String = ""
+    @Binding var addGroup : String
+    @State var addTodo : String = ""
     @State var todoNumber: Int = 0
+    
+    var todos : [Int:String] = [:]
+    
+    var temp = 0
     
     var body: some View {
         let screenSize: CGRect = UIScreen.main.bounds
@@ -82,15 +86,18 @@ struct AddTodo: View {
             }
             
             ScrollView {
-                ForEach(0 ..< todoNumber, id: \.self) { _ in
+                ForEach(0 ..< todoNumber, id: \.self) { i in
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .fill(Color.lightGray)
                             .frame(width: screenSize.width-40, height: 60, alignment: .center)
                         
-                        TextField("안녕?", text : $addTodo1)
+                        TextField("안녕?", text : $addTodo)
                             .frame(width: screenSize.width-60, height: 60, alignment: .center)
+
                     }
+                    
+                    
                 }
             }
             
@@ -101,7 +108,6 @@ struct AddTodo: View {
     }
     
 }
-
 
 
 extension Color {
@@ -124,6 +130,6 @@ extension View {
 
 struct AddTodo_Previews: PreviewProvider {
     static var previews: some View {
-        AddTodo()
+        AddTodo(addGroup: Binding<String>.constant("ff"))
     }
 }
