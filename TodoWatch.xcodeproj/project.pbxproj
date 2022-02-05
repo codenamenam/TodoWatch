@@ -17,6 +17,8 @@
 		3DE1FB5126D4B96E002D9EAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE1FB5026D4B96E002D9EAE /* Preview Assets.xcassets */; };
 		3DE1FB5C26D4B96E002D9EAE /* TodoWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE1FB5B26D4B96E002D9EAE /* TodoWatchTests.swift */; };
 		3DE1FB6726D4B96E002D9EAE /* TodoWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE1FB6626D4B96E002D9EAE /* TodoWatchUITests.swift */; };
+		3DF2550627AEF64D0073515A /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2550527AEF64D0073515A /* TopBar.swift */; };
+		3DF2550927AEFBBA0073515A /* Acievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2550827AEFBBA0073515A /* Acievement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		3DE1FB6226D4B96E002D9EAE /* TodoWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE1FB6626D4B96E002D9EAE /* TodoWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoWatchUITests.swift; sourceTree = "<group>"; };
 		3DE1FB6826D4B96E002D9EAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DF2550527AEF64D0073515A /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
+		3DF2550827AEFBBA0073515A /* Acievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acievement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				3D3E0308278C2586009635E4 /* AddTodo.swift */,
+				3DF2550527AEF64D0073515A /* TopBar.swift */,
 				3D3E0304278C1C0A009635E4 /* TodoButton.swift */,
 			);
 			path = HomeScreenElements;
@@ -139,6 +144,7 @@
 			children = (
 				3DE1FB4926D4B96B002D9EAE /* TodoWatchApp.swift */,
 				3D06C42E26D4F2D90015A1DA /* HomeScreen */,
+				3DF2550727AEFBA50073515A /* Acievement */,
 				3DADABED26DCCEBB00223C87 /* CalendarAndAnalysis */,
 				3DADABE926DCB0B400223C87 /* StopWatch */,
 				3DE1FB4D26D4B96E002D9EAE /* Assets.xcassets */,
@@ -172,6 +178,14 @@
 				3DE1FB6826D4B96E002D9EAE /* Info.plist */,
 			);
 			path = TodoWatchUITests;
+			sourceTree = "<group>";
+		};
+		3DF2550727AEFBA50073515A /* Acievement */ = {
+			isa = PBXGroup;
+			children = (
+				3DF2550827AEFBBA0073515A /* Acievement.swift */,
+			);
+			path = Acievement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,9 +317,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF2550627AEF64D0073515A /* TopBar.swift in Sources */,
 				3D06C41F26D4E5510015A1DA /* StopWatch.swift in Sources */,
 				3DADAC1326DCD53A00223C87 /* ScrollBlockView.swift in Sources */,
 				3D3E0305278C1C0A009635E4 /* TodoButton.swift in Sources */,
+				3DF2550927AEFBBA0073515A /* Acievement.swift in Sources */,
 				3DE1FB4A26D4B96B002D9EAE /* TodoWatchApp.swift in Sources */,
 				3D06C42726D4E7600015A1DA /* HomeScreen.swift in Sources */,
 				3D3E0309278C2586009635E4 /* AddTodo.swift in Sources */,
